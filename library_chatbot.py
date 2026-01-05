@@ -108,8 +108,8 @@ def initialize_chain(selected_model: str, pdf_path: str):
 # -------------------------------------------------------------------
 # ✅ Streamlit UI
 # -------------------------------------------------------------------
-st.set_page_config(page_title="감정공감챗봇", page_icon="📚")
-st.header("감정공감챗봇 💬📚")
+st.set_page_config(page_title="이쁜 여자 아이돌 찾기", page_icon="📚")
+st.header("이여돌")
 
 # 모델 선택
 option = st.selectbox("Select GPT Model", ("gpt-4o-mini", "gpt-3.5-turbo-0125"))
@@ -165,5 +165,6 @@ if prompt_message := st.chat_input("질문을 입력하세요"):
                 for doc in response.get("context", []):
                     src = doc.metadata.get("source", "source")
                     st.markdown(src, help=doc.page_content)
+
 
 
